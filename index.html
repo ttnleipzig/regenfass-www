@@ -80,9 +80,16 @@
                         bibendum. Nunc non posuere consectetur, justo erat semper enim, non
                         hendrerit dui odio id enim.</p>
                     <p class="text-center">
-                        <esp-web-install-button manifest="https://firmware.esphome.io/esp-web-tools/manifest.json">
+
+
+                        <select name="type" data-te-select-init
+                            class="p-6 mr-0 rounded-l-lg bg-white dark:bg-slate-700 " style="margin-right: -4px">
+                            <option value="heltec">Helltec LoRa32</option>
+                            <option value="esp32-generic">Generic ESP32</option>
+                        </select>
+                        <esp-web-install-button manifest="/manifest.json">
                             <button slot="activate"
-                                class="my-5 shrink-0 rounded-md bg-gradient-to-br from-sky-500 to-cyan-400 px-12 py-5 text-lg font-medium hover:from-sky-700 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/50">
+                                class="my-5 ml-0 shrink-0 rounded-r-lg bg-gradient-to-br from-sky-500 to-cyan-400 px-12 py-5 text-lg font-medium hover:from-sky-700 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/50">
                                 Install
                             </button>
                             <span slot="unsupported">Ah snap, your browser doesn't work!</span>
@@ -122,6 +129,16 @@
             <div class="text-sm text-gray-400 dark:text-gray-200">© Copyright 2024 by TTN Leipzig.</div>
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('select[name="type"]').forEach(option =>
+            option.addEventListener("change", () => {
+                const button = document.querySelector('esp-web-install-button')
+                button.manifest = `./manifest_${option.value}.json`
+                button.classList.remove('invisible')
+            }
+            ));
+    </script>
 </body>
 
 </html>
