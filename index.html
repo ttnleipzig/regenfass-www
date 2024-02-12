@@ -1,13 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regenfass - installer</title>
+    <meta name="description" content="Regenfass web installer. Install the software directly from the website.">
+    <meta name="author" content="TTN Leipzig">
+    <link rel="icon" type="image/png" href="/public/regenfass.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="/public/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+
+    <!-- opengraph -->
+    <meta property="og:title" content="regenfass - installer">
+    <meta property="og:description" content="Regenfass web installer. Install the software directly from the website.">
+    <meta property="og:image" content="/public/regenfass-opengraph.png">
+    <meta property="og:url" content="https://regenfass.ttn-leipzig.de/">
+    <meta property="og:site_name" content="regenfass">
+    <meta property="og:type" content="website">
+
+</head>
+
+<body class="bg-slate-100 text-gray-800 dark:bg-slate-900 dark:text-gray-100">
+    <div class="mx-auto max-w-screen-lg px-3 py-6">
+        <div class="flex flex-col gap-y-3 sm:flex-row sm:items-center sm:justify-between"><a
+                href="/demo/astro-boilerplate">
+                <div
+                    class="flex items-center bg-gradient-to-br from-sky-700 to-cyan-100 bg-clip-text text-xl font-bold text-transparent">
+                    regenfass
+                </div>
+            </a>
+            <nav>
+                <ul class="flex gap-x-3 font-medium text-gray-800 dark:text-gray-400">
+                    <li>
+                        <a href="https://regenfass.ttn-leipzig.de/"
+                            class="p-2 hover:text-slate-500 dark:hover:text-white hover:underline">Docs</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ttnleipzig"
+                            class="p-2 hover:text-slate-500 dark:hover:text-white hover:underline">GitHub</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/ttn-leipzig"
+                            class="p-2 hover:text-slate-500 dark:hover:text-white hover:underline">Twitter</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="mx-auto max-w-screen-lg px-3 py-6">
+        <div class="flex flex-col items-center md:flex-row md:justify-between md:gap-x-24">
+            <div>
+                <h1 class="text-3xl font-bold">Hi there! 👋</h1>
+                <p class="mt-6 text-xl leading-9">
+                    This project is about a smart water tank. It measures the water level and sends the data to a
+                    server. The server can be used to control the water pump. The pump can be controlled via a web
+                    interface or via a telegram bot. It uses a HC-SR04 ultrasonic sensor to measure the water level. The
+                    data is sent to TTN via a LoRaWAN gateway.
+                </p>
+            </div>
+            <div class="shrink-0 hidden lg:block">
+                <img src="public/regenfass.png" alt="Avatar image" loading="lazy" />
+            </div>
+        </div>
+    </div>
+    <div class="mx-auto max-w-screen-lg px-3 py-6">
+        <h2 class="mb-6 text-2xl font-bold">Installation</h2>
+        <div class="flex flex-col gap-6">
+            <div class="flex flex-col items-center gap-x-8 rounded-md bg-sky-200 dark:bg-slate-800 p-3 md:flex-row">
+                <div>
+                    <div class="flex flex-col items-center gap-y-2 md:flex-row">
+                        <div class="text-xl font-semibold">Instructions</div>
+                    </div>
+                    <p class="mt-3 text-gray-700 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Suspendisse
+                        bibendum. Nunc non posuere consectetur, justo erat semper enim, non
+                        hendrerit dui odio id enim.</p>
+                    <p class="text-center">
+                        <esp-web-install-button manifest="https://firmware.esphome.io/esp-web-tools/manifest.json">
+                            <button slot="activate"
+                                class="my-5 shrink-0 rounded-md bg-gradient-to-br from-sky-500 to-cyan-400 px-12 py-5 text-lg font-medium hover:from-sky-700 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/50">
+                                Install
+                            </button>
+                            <span slot="unsupported">Ah snap, your browser doesn't work!</span>
+                            <span slot="not-allowed">Ah snap, you are not allowed to use this on HTTP!</span>
+                        </esp-web-install-button>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mx-auto max-w-screen-lg px-3 py-6">
+        <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+            <div class="sm:w-7/12">
+                <div class="text-3xl font-bold">Subscribe to the update <span
+                        class="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">Newsletters</span>
+                </div>
+                <p class="mt-3 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero
+                    esse non molestias eos excepturi, inventore atque cupiditate.</p>
+            </div>
+            <div class="w-full sm:w-5/12">
+                <form
+                    class="flex rounded-full bg-white dark:bg-slate-800 px-4 py-2 focus-within:ring-2 focus-within:ring-cyan-600 hover:ring-2 hover:ring-cyan-600">
+                    <input type="email" class="w-full appearance-none  dark:bg-slate-800 focus:outline-none"
+                        placeholder="your@email-address.iot" />
+                    <button
+                        class="ml-2 shrink-0 rounded-full bg-gradient-to-br from-sky-500 to-cyan-400 px-3 py-1 text-sm font-medium hover:from-sky-700 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-cyan-600/50"
+                        type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="mx-auto max-w-screen-lg px-3 py-6">
+        <div class="border-t border-gray-300 dark:border-gray-600 pt-5">
+            <div class="text-sm text-gray-400 dark:text-gray-200">© Copyright 2024 by TTN Leipzig.</div>
+        </div>
+    </div>
+</body>
+
 </html>
