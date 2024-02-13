@@ -1,0 +1,15 @@
+{
+    "name": "regenfass-www",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "dev": "tailwindcss -i ./public/_style.css -o ./public/style.css --watch"
+    },
+    "keywords": [],
+    "author": "",
+    "packageManager": "pnpm@8.15.2",
+    "license": "AGPL-3.0-only",
+    "devDependencies": {
+        "tailwindcss": "^3.4.1"
+    }
+}
