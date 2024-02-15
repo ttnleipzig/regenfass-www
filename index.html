@@ -19,6 +19,26 @@
     <meta property="og:url" content="https://regenfass.ttn-leipzig.de/">
     <meta property="og:site_name" content="regenfass">
     <meta property="og:type" content="website">
+
+    <!-- jsonld for a product page -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "regenfass",
+            "image": "https://regenfass.ttn-leipzig.de/public/regenfass-opengraph.png",
+            "description": "Regenfass web installer. Install the software directly from the website.",
+            "brand": {
+                "@type": "Organization",
+                "name": "TTN Leipzig"
+            },
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR"
+            }
+        }
+    </script>
 </head>
 
 <body>
