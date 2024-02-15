@@ -22,22 +22,70 @@
 
     <!-- jsonld for a product page -->
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@type": "Product",
-            "name": "regenfass",
-            "image": "https://regenfass.ttn-leipzig.de/public/regenfass-opengraph.png",
-            "description": "Regenfass web installer. Install the software directly from the website.",
-            "brand": {
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "regenfass",
+        "sku": "regenfass",
+        "description": "Regenfass web installer. Install the software directly from the website.",
+        "image": "https://regenfass.ttn-leipzig.de/public/regenfass-opengraph.png",
+        "url": "https://regenfass.eu",
+        "brand": {
+            "@type": "Organization",
+            "name": "TTN Leipzig",
+            "url": "https://ttn-leipzig.de",
+            "logo": "https://www.thethingsnetwork.org/logo/Leipzig.svg",
+            "sameAs": [
+                "https://twitter.com/ttnleipzig",
+                "https://github.com/ttnleipzig"
+            ]
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "url": "https://regenfass.eu",
+            "seller": {
                 "@type": "Organization",
-                "name": "TTN Leipzig"
+                "name": "TTN Leipzig",
+                "url": "https://ttn-leipzig.de",
+                "logo": "https://www.thethingsnetwork.org/logo/Leipzig.svg",
+                "sameAs": [
+                    "https://twitter.com/ttnleipzig",
+                    "https://github.com/ttnleipzig"
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "contactType": "user support",
+                    "email": "info@regenfass.eu",
+                    "url": "https://docs.regenfass.eu"
+                }
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "1"
+        },
+        "review": {
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
             },
-            "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "EUR"
+            "author": {
+                "@type": "Person",
+                "name": "André Lademan",
+                "url": "https://andrelademann.de",
+                "sameAs": [
+                    "https://twitter.com/vergissberlin",
+                    "https://github.com/vergissberlin"
+                ]
             }
         }
+    }
     </script>
 </head>
 
