@@ -1,7 +1,8 @@
 {
     "name": "regenfass-www",
     "version": "1.0.0",
-    "description": "",
+    "description": "Install regenfass with your browser",
+    "private": true,
     "scripts": {
         "dev": "tailwindcss -i ./public/_style.css -o ./public/style.css --watch"
     },
